@@ -1,0 +1,22 @@
+# Initialize git in your current folder
+git init  # 🔁 Only needed once to start tracking
+
+# Add all files to staging
+git add .  # 📦 Stage all files for commit
+
+# Commit with a message
+git commit -m "Initial commit"  # 📝 Save snapshot of current state
+
+# Try to add GitHub as a remote
+git remote add origin https://github.com/username/repo.git \
+|| echo "⚠️ Remote 'origin' already exists. Fixing..."
+
+# If remote already exists, fix it
+git remote set-url origin https://github.com/username/repo.git
+
+# Confirm remote is set correctly
+git remote -v  # 👁️ View the current remote URL
+
+# Push to GitHub (use 'main' or 'master' depending on your branch)
+git push -u origin main \
+|| git push -u origin master  # ☁️ Upload your local repo to GitHub
